@@ -79,9 +79,12 @@ User dapat mengakses dashboard ini secara interaktif dilengkapi dengan Map, char
 [Click Here](https://environmental-analysis-impact.streamlit.app/)
 
 ### Tampilan Dashboard Analisis
+Dashboard utama menampilkan summary Total CO₂ Reduction (kg), Total Energy Output (kWh), Rata-rata Risiko Lingkungan. Selain itu ditampilkan juga untuk Proyek Paling Efisien dan Projek dengan Risiko Tertinggi.
 ![image](https://github.com/user-attachments/assets/41b33f6f-f3b4-491d-a50c-32f077627cad)
 
+Dashboard map menampilkan pemetaan projek sesuai dengan provinsinya dilengkapi dengan informasi sesuai pada dataset
 ![image](https://github.com/user-attachments/assets/5d8a1ffe-27a6-4a2a-b18c-8dafd1465d42)
+
 
 ![image](https://github.com/user-attachments/assets/246e9c15-e9eb-4add-a8d5-3730c7d17cc9)
 
