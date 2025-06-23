@@ -24,7 +24,7 @@ Maka dari itu, transisi menuju energi bersih seperti PLTS dan PLTM bukan hanya s
 
 ## Tujuan Proyek
 
-Produk Hijau X adalah inisiatif untuk:
+Projek ini adalah inisiatif untuk:
 - Mengimplementasikan proyek energi terbarukan secara masif di berbagai provinsi
 - Memantau dampak lingkungan dan efisiensi tiap proyek secara real-time
 - Menyediakan sistem rekomendasi untuk perbaikan atau replikasi proyek
