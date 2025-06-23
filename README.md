@@ -85,7 +85,7 @@ Dashboard utama menampilkan summary Total CO₂ Reduction (kg), Total Energy Out
 Dashboard map menampilkan pemetaan projek sesuai dengan provinsinya dilengkapi dengan informasi sesuai pada dataset
 ![image](https://github.com/user-attachments/assets/5d8a1ffe-27a6-4a2a-b18c-8dafd1465d42)
 
-
+Visualisasi data dengan Pie Chart dan bar chart dilengkapi dengan rekomendasi action plan untuk setiap Projek
 ![image](https://github.com/user-attachments/assets/246e9c15-e9eb-4add-a8d5-3730c7d17cc9)
 
 ![image](https://github.com/user-attachments/assets/c8f58f56-9c0e-4556-a449-f4a9d9f6d434)
