@@ -10,7 +10,7 @@ Batch : 9
 
 Perubahan iklim global menjadi tantangan terbesar abad ini. Salah satu penyumbang terbesar emisi gas rumah kaca (GRK) adalah sektor energi, khususnya dari pembakaran bahan bakar fosil. Berdasarkan laporan IPCC (2021), sektor energi menyumbang sekitar **73% dari total emisi global**.
 
-![image](https://github.com/user-attachments/assets/ff2ee286-319a-4527-9284-5c47c06ae936)
+![image](https://github.com/user-attachments/assets/f3c241ff-8d35-459a-a4c7-9d7cb22d78b1)
 
 
 Indonesia sebagai negara berkembang memiliki tantangan unik:
