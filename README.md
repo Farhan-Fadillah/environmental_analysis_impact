@@ -162,8 +162,8 @@ Menampilkan data table source dan membuat kolom baru "Kategori_Dampak" dari kolo
 ![image](https://github.com/user-attachments/assets/02ec0055-efc6-4f3a-b881-a6fb66f80479)
 
 ### Rekomendasi Action Plan Based on Environmental risk index dan Efisiensi C02 per kWh
-      def generate_action_plan(row):
-          rekomendasi = []
+    def generate_action_plan(row):
+        rekomendasi = []
 
     if row["Environmental_Risk_Index"] >= 60:
         rekomendasi.append("🚨 Risiko tinggi: audit & konservasi diperlukan.")
