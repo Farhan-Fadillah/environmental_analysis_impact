@@ -10,6 +10,7 @@ def load_data():
     df = pd.read_excel("Environmental_Dataset.xlsx", sheet_name="Environmental_Dataset")
     df["Provinsi"] = df["Project_ID"].str.extract(r'PL[TSM]+-([A-Z]+)-')
     df["Efisiensi_CO2_per_kWh"] = df["CO2_Reduction"] / df["Energy_Output"]
+    df["Kategori_Dampak"] = df["Peringkat_Dampak"].str.extract(r'(High|Medium|Low)')
     return df
 
 df = load_data()
@@ -81,9 +82,10 @@ st_data = st_folium(m, width=900, height=500)
 # =============================
 st.subheader("Visualisasi Data")
 
-# Efisiensi CO₂ per kWh
+# Efisiensi CO₂ per kWh (sorted)
+sorted_df_eff = df.sort_values("Efisiensi_CO2_per_kWh", ascending=False)
 fig1 = px.bar(
-    df,
+    sorted_df_eff,
     x="Project_ID",
     y="Efisiensi_CO2_per_kWh",
     color="Efisiensi_CO2_per_kWh",
@@ -92,22 +94,21 @@ fig1 = px.bar(
 )
 st.plotly_chart(fig1, use_container_width=True)
 
-# Risiko Lingkungan
+# Risiko Lingkungan (sorted)
+sorted_df_risk = df.sort_values("Environmental_Risk_Index", ascending=False)
 fig2 = px.bar(
-    df,
+    sorted_df_risk,
     x="Project_ID",
     y="Environmental_Risk_Index",
     color="Environmental_Risk_Index",
-    color_continuous_scale="Reds",
+    color_continuous_scale="reds",
     title="Environmental Risk Index per Proyek"
 )
 st.plotly_chart(fig2, use_container_width=True)
 
 # Pie Chart Peringkat Dampak
-df["Kategori_Dampak"] = df["Peringkat_Dampak"].str.extract(r'(High|Medium|Low)')
 pie_data = df["Kategori_Dampak"].value_counts().reset_index()
 pie_data.columns = ["Kategori", "Jumlah"]
-
 fig3 = px.pie(
     pie_data,
     names="Kategori",
@@ -117,10 +118,11 @@ fig3 = px.pie(
 )
 st.plotly_chart(fig3, use_container_width=True)
 
+# Visualisasi Berdasarkan Provinsi
 st.subheader("Visualisasi Berdasarkan Provinsi")
 
-# 1. Total CO2 Reduction per Provinsi
-prov_emisi = df.groupby("Provinsi")["CO2_Reduction"].sum().reset_index()
+# Total CO₂ Reduction per Provinsi (sorted)
+prov_emisi = df.groupby("Provinsi")["CO2_Reduction"].sum().reset_index().sort_values("CO2_Reduction", ascending=False)
 fig4 = px.bar(
     prov_emisi,
     x="Provinsi",
@@ -131,8 +133,8 @@ fig4 = px.bar(
 )
 st.plotly_chart(fig4, use_container_width=True)
 
-# 2. Rata-rata Efisiensi per Provinsi
-prov_efisiensi = df.groupby("Provinsi")["Efisiensi_CO2_per_kWh"].mean().reset_index()
+# Rata-rata Efisiensi per Provinsi (sorted)
+prov_efisiensi = df.groupby("Provinsi")["Efisiensi_CO2_per_kWh"].mean().reset_index().sort_values("Efisiensi_CO2_per_kWh", ascending=False)
 fig5 = px.bar(
     prov_efisiensi,
     x="Provinsi",
@@ -143,8 +145,8 @@ fig5 = px.bar(
 )
 st.plotly_chart(fig5, use_container_width=True)
 
-# 3. Rata-rata Risiko Lingkungan per Provinsi
-prov_risk = df.groupby("Provinsi")["Environmental_Risk_Index"].mean().reset_index()
+# Rata-rata Risiko Lingkungan per Provinsi (sorted)
+prov_risk = df.groupby("Provinsi")["Environmental_Risk_Index"].mean().reset_index().sort_values("Environmental_Risk_Index", ascending=False)
 fig6 = px.bar(
     prov_risk,
     x="Provinsi",
@@ -155,11 +157,12 @@ fig6 = px.bar(
 )
 st.plotly_chart(fig6, use_container_width=True)
 
-# Rekomendasi
+# =============================
+# 🧭 Rekomendasi & Action Plan
+# =============================
 st.subheader("Rekomendasi & Action Plan")
 
 selected_project = st.selectbox("Pilih Project ID", df["Project_ID"].unique())
-
 selected_row = df[df["Project_ID"] == selected_project].iloc[0]
 
 st.markdown(f"### Project: **{selected_project}** ({selected_row['Provinsi']})")
