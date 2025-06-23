@@ -73,6 +73,9 @@ Produk Hijau X adalah inisiatif untuk:
 
 
 ---
+# Dashboard Analisis
+User dapat mengakses dashboard ini secara interaktif dilengkapi dengan Map, chart dan rekomendasi aksi per projek
+![Click Here](https://environmental-analysis-impact.streamlit.app/)
 
 
 ## Detail Technical Process Analysis
