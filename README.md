@@ -45,7 +45,7 @@ Produk Hijau X adalah inisiatif untuk:
 
 ---
 
-## 📚 Dasar Ilmiah & Referensi
+## Dasar Ilmiah & Referensi
 
 1. **IPCC Sixth Assessment Report**  
    [https://www.ipcc.ch/report/ar6/wg3/](https://www.ipcc.ch/report/ar6/wg3/)
@@ -74,6 +74,8 @@ Produk Hijau X adalah inisiatif untuk:
 
 ---
 
+
+## Detail Technical Process Analysis
 ### Import Module
 Menampilkan data table source dan membuat kolom baru "Kategori_Dampak" dari kolom "Peringkat_Dampak"
 
