@@ -1,5 +1,3 @@
-# environmental_analysis_impact
-
 # Analisis Proyek Energi Terbarukan - Produk Hijau X
 
 Nama : Farhan Fadillah
@@ -11,6 +9,9 @@ Batch : 9
 ## Latar Belakang
 
 Perubahan iklim global menjadi tantangan terbesar abad ini. Salah satu penyumbang terbesar emisi gas rumah kaca (GRK) adalah sektor energi, khususnya dari pembakaran bahan bakar fosil. Berdasarkan laporan IPCC (2021), sektor energi menyumbang sekitar **73% dari total emisi global**.
+
+![image](https://github.com/user-attachments/assets/ff2ee286-319a-4527-9284-5c47c06ae936)
+
 
 Indonesia sebagai negara berkembang memiliki tantangan unik:
 - Ketergantungan tinggi terhadap energi fosil
