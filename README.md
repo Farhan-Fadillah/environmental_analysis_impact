@@ -96,6 +96,7 @@ Menampilkan data table source dan membuat kolom baru "Kategori_Dampak" dari kolo
           color_continuous_scale="greens"
       )
       fig1.show()
+![image](https://github.com/user-attachments/assets/a9d3ad07-ed35-44f9-836e-1851380ecf96)
 
 ### Analisa Enviromental Risk Index per Proyek dengan Bar Chart
       fig2 = px.bar(
@@ -107,6 +108,7 @@ Menampilkan data table source dan membuat kolom baru "Kategori_Dampak" dari kolo
           color_continuous_scale="reds"
       )
       fig2.show()
+![image](https://github.com/user-attachments/assets/acf34557-b55d-46d1-b859-aa5f20af645e)
 
 ### Analisa distribusi peringkat dampak lingkungan (analisa jumlah komposisi High and Medium) dengan Pie Chart
       pie_data = df["Kategori_Dampak"].value_counts().reset_index()
@@ -120,24 +122,26 @@ Menampilkan data table source dan membuat kolom baru "Kategori_Dampak" dari kolo
           color_discrete_sequence=px.colors.sequential.Viridis
       )
       fig3.show()
-
+![image](https://github.com/user-attachments/assets/149061ef-ea17-4af2-b28d-680044b33908)
 
 ### Analisa Total C02, Rata-rata efisiensi, Rata-rata risiko per provinsi dengan Bar Chart
 #### Total CO2 Reduction per Provinsi
       prov_emisi = df.groupby("Provinsi")["CO2_Reduction"].sum().reset_index()
       fig4 = px.bar(prov_emisi, x="Provinsi", y="CO2_Reduction", title="Total CO₂ Reduction per Provinsi")
       fig4.show()
+![image](https://github.com/user-attachments/assets/640283e4-419d-4162-81b8-7bef435738a8)
 
 #### Rata-rata Efisiensi per Provinsi
       prov_eff = df.groupby("Provinsi")["Efisiensi_CO2_per_kWh"].mean().reset_index()
       fig5 = px.bar(prov_eff, x="Provinsi", y="Efisiensi_CO2_per_kWh", title="Rata-rata Efisiensi CO₂ per Provinsi")
       fig5.show()
+![image](https://github.com/user-attachments/assets/66b7fef3-150f-48fb-b344-307b547507bd)
 
 #### Rata-rata Risiko per Provinsi
       prov_risk = df.groupby("Provinsi")["Environmental_Risk_Index"].mean().reset_index()
       fig6 = px.bar(prov_risk, x="Provinsi", y="Environmental_Risk_Index", title="Rata-rata Risk Index per Provinsi")
       fig6.show()
-
+![image](https://github.com/user-attachments/assets/02ec0055-efc6-4f3a-b881-a6fb66f80479)
 
 ### Rekomendasi Action Plan Based on Environmental risk index dan Efisiensi C02 per kWh
       def generate_action_plan(row):
@@ -160,6 +164,7 @@ Menampilkan data table source dan membuat kolom baru "Kategori_Dampak" dari kolo
 #### Apply ke DataFrame
       df["Action_Plan"] = df.apply(generate_action_plan, axis=1)
       df
+![image](https://github.com/user-attachments/assets/c0419f4f-90aa-40ea-94e9-3d7344376310)
 
 
 ## Kesimpulan & Rekomendasi Akhir
